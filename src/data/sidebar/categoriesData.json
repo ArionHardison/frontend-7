@@ -1,0 +1,24 @@
+{
+    "categoriesData": [
+        {
+            "id": 1,
+            "title": "Hairstyle",
+            "link": "/news"
+        },
+        {
+            "id": 2,
+            "title": "Beard",
+            "link": "/news"
+        },
+        {
+            "id": 3,
+            "title": "Cosmetic",
+            "link": "/news"
+        },
+        {
+            "id": 4,
+            "title": "Shave",
+            "link": "/news"
+        }
+    ]
+}

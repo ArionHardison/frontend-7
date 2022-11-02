@@ -1,0 +1,14 @@
+{
+    "priceListData1": [
+        {
+            "id": 1,
+            "title": "Scalp scrub treatment with Lorem Ipsum",
+            "price": "From 35 $"
+        },
+        {
+            "id": 2,
+            "title": "Scalp renewing treatment with Lorem Ipsum",
+            "price": "From 35 $"
+        }
+    ]
+}
