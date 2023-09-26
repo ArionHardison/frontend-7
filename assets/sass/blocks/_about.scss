@@ -1,0 +1,13 @@
+//=================================================
+// About
+//=================================================
+
+.about-content {
+	.about-left {
+		color: $body_text_primary_color;
+		
+		@media #{$media_lg} {
+			padding-bottom: $space_md;
+		}
+	}
+}

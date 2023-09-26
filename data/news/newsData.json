@@ -1,0 +1,58 @@
+{
+    "newsData": [
+        {
+            "id": 1,
+            "title": "Welding-topics on Your Inverter Power Supply",
+            "link": "/news-single-post",
+            "imgSrc": "assets/img/placeholder/13_img.jpg",
+            "category": "Category",
+            "categoryLink": "/news",
+            "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered."
+        },
+        {
+            "id": 2,
+            "title": "Robotic Welding-topics",
+            "link": "/news-single-post",
+            "imgSrc": "assets/img/placeholder/14_img.jpg",
+            "category": "Category",
+            "categoryLink": "/news",
+            "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered."
+        },
+        {
+            "id": 3,
+            "title": "MFDC Power Supplies for Resistance Spot Welders",
+            "link": "/news-single-post",
+            "imgSrc": "assets/img/placeholder/15_img.jpg",
+            "category": "Category",
+            "categoryLink": "/news",
+            "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered."
+        },
+        {
+            "id": 4,
+            "title": "There are many variations of passages of Lorem Ipsum available",
+            "link": "/news-single-post",
+            "imgSrc": "assets/img/placeholder/16_img.jpg",
+            "category": "Category",
+            "categoryLink": "/news",
+            "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered."
+        },
+        {
+            "id": 5,
+            "title": "Welding-topics on Your Inverter Power Supply",
+            "link": "/news-single-post",
+            "imgSrc": "assets/img/placeholder/13_img.jpg",
+            "category": "Category",
+            "categoryLink": "/news",
+            "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered."
+        },
+        {
+            "id": 6,
+            "title": "Robotic Welding-topics",
+            "link": "/news-single-post",
+            "imgSrc": "assets/img/placeholder/14_img.jpg",
+            "category": "Category",
+            "categoryLink": "/news",
+            "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered."
+        }
+    ]
+}

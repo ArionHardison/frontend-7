@@ -1,0 +1,27 @@
+//=================================================
+// Header
+//=================================================
+
+.site-header {
+    color: $header_color;
+
+    .wrapper {
+        background-color: $header_background_color;
+        padding-top: $header_padding_t;
+        padding-bottom: $header_padding_b;
+
+        .header-content {
+            .header-logo {
+                margin-right: $space_md;
+            }
+
+            .header-menu {
+                .menu-toggle {
+                    .forch-icon-menu {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

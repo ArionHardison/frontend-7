@@ -1,0 +1,142 @@
+//=================================================
+// Services
+//=================================================
+
+#services {
+	.text-tertiary {
+		p {
+			color: rgba($body_text_tertiary_color, 0.5) !important;
+		}
+
+		.adv-swiper-control {
+			.adv-3-swiper-button {
+				&-prev, &-next {
+					color: $body_text_tertiary_color;
+
+					&:not(.adv-swiper-button-disabled) {
+						&:before, &:after {
+							background-color: $body_text_tertiary_color;
+						}
+					}
+
+					&:hover {
+						opacity: 0.5;
+					}
+
+					&.adv-swiper-button-disabled {
+						opacity: 0.5;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*=============================
+// Services slider
+=============================*/
+.adv-slider-services {
+	overflow: hidden;
+	margin-top: -$space_xl;
+
+	@media #{$media_md} {
+		border-left: solid 1px rgba(239, 239, 239, 0.17);
+		margin-top: 0;
+	}
+
+	.adv-swiper-container {
+		.services-items {
+			.services-item {
+				border-left: solid 1px rgba(239, 239, 239, 0.17);
+				padding-top: $space_xl;
+				padding-left: $space_sm;
+				padding-right: $space_sm;
+
+				@media #{$media_md} {
+					padding-top: 0;
+					width: 100%;
+					border: 0;
+				}
+
+				.services-item-content {
+					padding-top: $space_lg + 1.579rem;
+
+					@media #{$media_md} {
+						padding-top: 0;
+					}
+
+					.services-item-number {
+						font-size: $f_size_sm;
+						color: $body_main_element_primary_color;
+					}
+
+					.services-item-t-head {
+						padding-top: $space_lg;
+					}
+
+					.services-item-body {
+						padding-top: $space_sm;
+
+						> * {
+							font-size: $f_size_df;
+						}
+					}
+
+					.service-item-footer {
+						padding-top: $space_lg;
+
+						.btn-link {
+							color: $body_main_element_primary_color;
+
+							i {
+								font-size: 1.684rem;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.adv-swiper-control {
+			@extend .d-flex;
+			@extend .justify-content-end;
+			padding-top: $space_lg;
+		}
+	}
+}
+
+/*=============================
+// Service inside 
+=============================*/
+
+//#service-inside {
+//	.title {
+//		padding-bottom: 3.15789rem;
+//		margin-bottom: 0;
+//	}
+//
+//	.card {
+//		border: 0;
+//
+//		.card-body {
+//			padding: $space_xl 0 !important;
+//		}
+//	}
+//
+//	.si-description {
+//		padding-top: 11.052632rem;
+//
+//		@media #{$media_md} {
+//			padding-top: $space_lg;
+//		}
+//	}
+//}
+
+//#service-inside {
+//	.img {
+//		&.object-fit {
+//			min-height: 26.315789rem;
+//			max-height: 40.789474rem;
+//		}
+//	}
+//}

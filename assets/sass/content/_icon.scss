@@ -1,0 +1,108 @@
+//=================================================
+// Icons
+//=================================================
+
+.fas {
+	&.fas-space-l {
+		padding-left: 0.737rem;
+	}
+
+	&.fas-space-r {
+		padding-right: 0.737rem;
+	}
+}
+
+.search-form {
+	.search {
+		.fas {
+			&.fa-search {
+				font-size: 1.053rem;
+			}
+		}
+	}
+}
+
+/*=============================
+// Close
+=============================*/
+.close {
+	opacity: 1;
+	@extend .transition-all;
+
+	> i {
+		text-shadow: none !important;
+	}
+
+	> span {
+		&:not(.adveits-i) {
+			@include lhCrop-b(1, 0.55);
+			@include lhCrop-a(1, 0.55);
+		}
+	}
+
+	&:hover {
+		color: $body_links_hover_color;
+		@extend .transition-all;
+
+		.forch-icon-close {
+			color: $body_links_hover_color;
+		}
+	}
+
+	&:not(:disabled):not(.disabled) {
+		&:hover, &:focus {
+			opacity: 1;
+		}
+	}
+}
+
+/*=============================
+// Forch icons
+=============================*/
+@font-face {
+	font-family: 'forch';
+	src: url('../fonts/Forch/forch.eot?17792584');
+	src: url('../fonts/Forch/forch.eot?17792584#iefix') format('embedded-opentype'),
+		 url('../fonts/Forch/forch.woff2?17792584') format('woff2'),
+	 	 url('../fonts/Forch/forch.woff?17792584') format('woff'),
+	 	 url('../fonts/Forch/forch.ttf?17792584') format('truetype'),
+		 url('../fonts/Forch/forch.svg?17792584#forch') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="forch-icon-"]:before, [class*=" forch-icon-"]:before {
+	font-family: "forch";
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	width: 1em;
+	text-align: center;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1em;
+}
+
+.forch-icon-arrow-right:before {
+	content: '\e800';
+}
+
+.forch-icon-arrow-left:before {
+	content: '\e801';
+}
+
+.forch-icon-arrow-top:before {
+	content: '\e802';
+}
+
+.forch-icon-arrow-bottom:before {
+	content: '\e803';
+}
+
+.forch-icon-menu:before {
+	content: '\e804';
+}
+
+.forch-icon-close:before {
+	content: '\e805';
+}

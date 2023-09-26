@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920px" height="400px" viewBox="0 0 1920 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>bg-stripes</title>
+    <desc>Created with Sketch.</desc>
+    <g id="bg-stripes" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.04" stroke-linecap="square">
+        <g id="Stripes_bg" transform="translate(159.000000, -3281.000000)" stroke="#000000">
+            <g>
+                <line x1="1" y1="0" x2="1" y2="6961.37847" id="Line-3"></line>
+                <line x1="226" y1="0" x2="226" y2="6961.37847" id="Line-3-Copy"></line>
+                <line x1="276" y1="0" x2="276" y2="6961.37847" id="Line-3-Copy-2"></line>
+                <line x1="551" y1="0" x2="551" y2="6961.37847" id="Line-3-Copy-4"></line>
+                <line x1="826" y1="0" x2="826" y2="6961.37847" id="Line-3-Copy-6"></line>
+                <line x1="1101" y1="0" x2="1101" y2="6961.37847" id="Line-3-Copy-8"></line>
+                <line x1="1376" y1="0" x2="1376" y2="6961.37847" id="Line-3-Copy-10"></line>
+                <line x1="501" y1="0" x2="501" y2="6961.37847" id="Line-3-Copy-3"></line>
+                <line x1="776" y1="0" x2="776" y2="6961.37847" id="Line-3-Copy-5"></line>
+                <line x1="1051" y1="0" x2="1051" y2="6961.37847" id="Line-3-Copy-7"></line>
+                <line x1="1326" y1="0" x2="1326" y2="6961.37847" id="Line-3-Copy-9"></line>
+                <line x1="1601" y1="0" x2="1601" y2="6961.37847" id="Line-3-Copy-11"></line>
+            </g>
+        </g>
+    </g>
+</svg>

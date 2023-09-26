@@ -1,0 +1,28 @@
+{
+    "recentEntriesData": [
+        {
+            "id": 1,
+            "title": "Welding-topics on Your Inverter Power Supply",
+            "imgSrc": "assets/img/placeholder/13_img.jpg",
+            "link": "/news-single-post"
+        },
+        {
+            "id": 2,
+            "title": "Robotic Welding-topics",
+            "imgSrc": "assets/img/placeholder/14_img.jpg",
+            "link": "/news-single-post"
+        },
+        {
+            "id": 3,
+            "title": "MFDC Power Supplies for Resistance Spot Welders",
+            "imgSrc": "assets/img/placeholder/15_img.jpg",
+            "link": "/news-single-post"
+        },
+        {
+            "id": 4,
+            "title": "There are many variations of passages of Lorem Ipsum available",
+            "imgSrc": "assets/img/placeholder/16_img.jpg",
+            "link": "/news-single-post"
+        }
+    ]
+}

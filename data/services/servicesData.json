@@ -1,0 +1,32 @@
+{
+    "servicesData": [
+        {
+            "id": 1,
+            "title": "Industrial equipment",
+            "number": "01.",
+            "link": "/service-inside",
+            "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
+        },
+        {
+            "id": 2,
+            "title": "Welding works",
+            "number": "02.",
+            "link": "/service-inside",
+            "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
+        },
+        {
+            "id": 3,
+            "title": "Metal constructions",
+            "number": "03.",
+            "link": "/service-inside",
+            "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
+        },
+        {
+            "id": 4,
+            "title": "Industrial equipment",
+            "number": "04.",
+            "link": "/service-inside",
+            "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
+        }
+    ]
+}

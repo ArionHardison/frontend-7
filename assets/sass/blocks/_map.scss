@@ -1,0 +1,69 @@
+//=================================================
+// Map
+//=================================================
+
+#mapbox {
+	width: 100%;
+	height: 100%;
+}
+
+.map {
+	.img {
+		&.object-fit {
+			min-height: 21.053rem;
+			max-height: 42.105rem;
+
+			@media #{$media_md} {
+				max-height: 21.053rem;
+			}
+
+			&:before {
+				padding-top: 45%;
+			}
+		}
+	}
+}
+
+.adv-marker {
+	.adv-marker-content {
+		position: relative;
+		padding: $space_xs / 2.5;
+		font-size: $f_size_sm;
+		font-family: $font_primary_bold;
+		font-weight: 700;
+		white-space: nowrap;
+		line-height: normal;
+		cursor: pointer;
+		@extend .transition-all;
+
+		&:after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			bottom: -0.263rem;
+			width: 0.789rem;
+			height: 0.789rem;
+			z-index: -1;
+			@include transform(translateX(-50%) rotate(-133deg));
+			@extend .transition-all;
+		}
+
+		&.style-1 {
+			background-color: $map_marker_background_color;
+			color: $map_marker_color;
+
+			&:after {
+				background-color: $body_main_element_primary_color;
+			}
+
+			&:hover {
+				background-color: $map_marker_hover_background_color;
+				color: $map_marker_hover_color;
+
+				&:after {
+					background-color: $map_marker_hover_background_color;
+				}
+			}
+		}
+	}
+}

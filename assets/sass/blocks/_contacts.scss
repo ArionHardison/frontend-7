@@ -1,0 +1,28 @@
+//=================================================
+// Contacts
+//=================================================
+
+.contacts {
+	.contacts-items {
+		.contacts-item {
+			color: $body_text_secondary_color;
+			padding-bottom: $space_lg;
+
+			&:last-child {
+				padding-bottom: 0;
+			}
+
+			p {
+				color: $body_text_secondary_color;
+			}
+
+			.contacts-item-description {
+				padding-top: $space_xs;
+
+				a {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

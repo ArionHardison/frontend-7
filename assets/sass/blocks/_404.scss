@@ -1,0 +1,61 @@
+//=================================================
+// 404
+//=================================================
+
+.error404 {
+    #main {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        #page-content {
+            .content {
+                .row {
+                    > [class*='col-'] {
+                        &:first-child {
+                            padding-top: $main_padding_t;
+                            padding-bottom: $main_padding_b;
+                        }
+                    }
+                }
+
+                .title {
+                    > * {
+                        font-size: 10.526316rem !important;
+                    }
+                }
+
+                .text {
+                    padding-top: $space_md;
+                    margin-bottom: 0;
+                }
+
+                .form {
+                    padding-top: $space_md;
+                }
+
+                .button {
+                    padding-top: $space_md;
+                }
+
+                .img-404 {
+                    position: relative;
+                    z-index: -1;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    height: calc(100% + 5.421rem + 4.895rem);
+                    margin-top: -5.421rem;
+                    width: calc((50% - 1.316rem) - (-50vw + 50%));
+
+                    @media #{$media_xl} {
+                        width: calc((50% - 0.79758rem) - (-50vw + 50%));
+                    }
+
+                    @media #{$media_md} {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

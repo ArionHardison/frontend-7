@@ -1,0 +1,19 @@
+{
+    "factsData": [
+        {
+            "id": 1,
+            "count": "158 +",
+            "description": "Winning Awards"
+        },
+        {
+            "id": 2,
+            "count": "518 +",
+            "description": "Happy Clients"
+        },
+        {
+            "id": 3,
+            "count": "69 +",
+            "description": "Active Project"
+        }
+    ]
+}

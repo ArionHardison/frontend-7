@@ -1,0 +1,148 @@
+//=================================================
+// Projects
+//=================================================
+
+.projects-items {
+	.projects-item {
+		position: relative;
+		overflow: hidden;
+		float: left;
+		width: 33.33%;
+		color: $body_text_tertiary_color;
+
+		@media #{$media_md} {
+			width: 100%;
+		}
+
+		.projects-item-content {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 3;
+			padding: $space_lg;
+
+			.projects-item-content-sec {
+				position: absolute;
+				top: 50%;
+				opacity: 0;
+				@include transform(translateY(100%));
+				transition: all $transition-s ease-in-out;
+				max-width: 21.053rem;
+
+				.projects-item-date {
+					> * {
+						font-size: $f_size_sm;
+					}
+				}
+
+				.projects-item-description {
+					padding-top: $space_lg;
+				}
+			}
+		}
+
+		.img {
+			&.object-fit {
+				min-height: 21.053rem;
+				max-height: 21.053rem;
+
+				&:before {
+					padding-top: 50%;
+				}
+			}
+
+			&-bg-color {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 2;
+				@extend .transition-all;
+			}
+		}
+
+		.object-fit-cover {
+			@extend .transition-all;
+			transform: perspective(1px) scale(1) translateZ(0);
+			backface-visibility: hidden;
+		}
+
+		&:hover {
+			.projects-item-content-sec {
+				opacity: 1;
+				@include transform(translateY(-50%));
+				transition: all $transition-s ease-in-out;
+			}
+
+			.img {
+				&-bg-color {
+					background-color: $body_main_element_tertiary_color;
+					opacity: 0.7;
+				}
+
+				.object-fit-cover {
+					transform: perspective(1px) scale(1.1) translateZ(0);
+				}
+			}
+		}
+	}
+
+	&.type-1 {
+		.projects-item {
+			&:nth-child(4n+1) {
+				.img {
+					&.object-fit {
+						min-height: 42.105rem;
+						max-height: 42.105rem;
+
+						@media #{$media_md} {
+							min-height: 21.053rem;
+							max-height: 21.053rem;
+						}
+
+						&:before {
+							padding-top: 100%;
+						}
+					}
+				}
+			}
+		}
+
+		.projects-item {
+			&:nth-child(4n+1) {
+				width: 41.6666%;
+
+				@media #{$media_md} {
+					width: 100%;
+				}
+			}
+
+			&:nth-child(4n+2) {
+				width: 58.3334%;
+
+				@media #{$media_md} {
+					width: 100%;
+				}
+			}
+
+			&:nth-child(4n+3) {
+				width: 29.1667%;
+
+				@media #{$media_md} {
+					width: 100%;
+				}
+			}
+
+			&:nth-child(4n+4) {
+				width: 29.1667%;
+
+				@media #{$media_md} {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

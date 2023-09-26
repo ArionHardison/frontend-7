@@ -1,0 +1,24 @@
+{
+    "categoriesData": [
+        {
+            "id": 1,
+            "title": "Welding",
+            "link": "/news"
+        },
+        {
+            "id": 2,
+            "title": "Robotic",
+            "link": "/news"
+        },
+        {
+            "id": 3,
+            "title": "MFDC Power",
+            "link": "/news"
+        },
+        {
+            "id": 4,
+            "title": "Power",
+            "link": "/news"
+        }
+    ]
+}

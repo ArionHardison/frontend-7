@@ -1,0 +1,115 @@
+//=================================================
+// Facts
+//=================================================
+
+#facts {
+	.text-tertiary {
+		p {
+			color: rgba($body_text_tertiary_color, 0.5) !important;
+		}
+
+		.facts-items {
+			[class*='col-'] {
+				border-color: rgba($body_text_tertiary_color, 0.17);
+			}
+		}
+
+		.facts-item {
+			.facts-item-content {
+				.facts-item-text {
+					&:after {
+						background-color: rgba($body_text_tertiary_color, 0.5);
+					}
+				}
+			}
+		}
+	}
+}
+
+.facts-items {
+	[class*='col-'] {
+		padding-top: 13.316rem;
+		margin-top: -13.316rem;
+		border-right: 1px solid $body_border_color;
+
+		&:last-child {
+			border-right: 0;
+		}
+
+		@media #{$media_md} {
+			margin-top: 0;
+			padding-top: 0;
+			border: 0;
+			margin-bottom: $space_lg;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.facts-item {
+			padding-left: $space_md / 2;
+			padding-right: $space_md / 2;
+
+			@media #{$media_xl} {
+				padding-left: $space_md / 3.3;
+				padding-right: $space_md / 3.3;
+			}
+
+			@media #{$media_sm} {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+
+	&.row {
+		&.gutter-width-md {
+			margin-left: (-$space_md / 2) + (-$space_md / 2);
+			margin-right: (-$space_md / 2) + (-$space_md / 2);
+
+			@media #{$media_xl} {
+				margin-left: (-$space_md / 3.3) + (-$space_md / 3.3);
+				margin-right: (-$space_md / 3.3) + (-$space_md / 3.3);
+			}
+
+			@media #{$media_sm} {
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.facts-item {
+	.facts-item-content {
+		@extend .d-flex;
+		@extend .justify-content-between;
+		@extend .style-default;
+
+		.facts-item-left {
+			padding-right: $space_sm;
+		}
+
+		.facts-item-text {
+			@extend .d-flex;
+			@extend .align-items-center;
+
+			> * {
+				font-size: $f_size_sm;
+				padding-right: $space_md;
+			}
+
+			&:after {
+				content: '';
+				width: 2.632rem;
+				height: 1px;
+				background-color: $body_text_primary_color;
+			}
+		}
+
+		.facts-item-title {
+			color: $body_main_element_primary_color !important;
+		}
+	}
+}

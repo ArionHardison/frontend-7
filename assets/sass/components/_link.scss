@@ -1,0 +1,31 @@
+//=================================================
+// Links
+//=================================================
+
+a {
+    color: $body_links_color;
+    @extend .transition-all;
+
+    &:hover {
+        color: $body_links_hover_color;
+        text-decoration: none;
+        @extend .transition-all;
+    }
+
+    &:not(.btn):not(.no-underline):not(.nav-link):not(.dropdown-item):not(.list-group-item):not(.page-link):not(.tag-cloud-link) {
+        text-decoration: underline;
+        text-decoration-color: transparent;
+
+        &:hover {
+            text-decoration-color: inherit;
+        }
+    }
+
+    &.a-small {
+        font-size: $f_size_df;
+    }
+
+    &.a-large {
+        font-size: $f_size_lg * 1.3;
+    }
+}

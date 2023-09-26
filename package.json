@@ -1,56 +1,52 @@
 {
-    "name": "chop-vuejs",
-    "version": "1.0.0",
-    "description": "Barber Shop Vue JS Template",
-    "author": "Adveits",
-    "private": true,
-    "scripts": {
-        "serve": "vue-cli-service serve",
-        "build": "vue-cli-service build"
-    },
-    "dependencies": {
-        "@glidejs/glide": "^3.4.1",
-        "animate.css": "^3.7.2",
-        "axios": "^0.21.1",
-        "babel-runtime": "^6.26.0",
-        "bootstrap": "^4.5.3",
-        "bootstrap-vue": "^2.0.4",
-        "core-js": "^3.3.2",
-        "extract-text-webpack-plugin": "^3.0.2",
-        "fslightbox-vue": "^1.1.2",
-        "prismjs": "^1.23.0",
-        "smoothscroll-polyfill": "^0.4.4",
-        "swiper": "^5.4.5",
-        "v-animate-css": "0.0.3",
-        "vue": "^2.6.10",
-        "vue-fragment": "^1.5.1",
-        "vue-head": "^2.2.0",
-        "vue-headroom": "^0.9.0",
-        "vue-meta": "^2.4.0",
-        "vue-prismjs": "^1.2.0",
-        "vue-router": "^3.1.3",
-        "vuex": "^3.0.1"
-    },
-    "devDependencies": {
-        "@vue/cli-plugin-babel": "^4.0.0",
-        "@vue/cli-plugin-router": "^4.0.0",
-        "@vue/cli-plugin-vuex": "^4.0.0",
-        "@vue/cli-service": "^4.0.0",
-        "copy-webpack-plugin": "^5.0.2",
-        "node-sass": "^4.12.0",
-        "sass-loader": "^8.0.0",
-        "vue-loader": "^15.7.0",
-        "vue-template-compiler": "^2.6.10"
-    },
-    "postcss": {
-        "plugins": {
-            "autoprefixer": {}
-        }
-    },
-    "browserslist": [
-        ">0.2%",
-        "not dead",
-        "not op_mini all",
-        "ie 10"
-    ]
+  "name": "nf7",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@glidejs/glide": "^3.4.1",
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/pwa": "^3.3.5",
+    "babel-runtime": "^6.26.0",
+    "sass": "^1.54.3",
+    "sass-loader": "10.2.0",
+    "animate.css": "^3.7.2",
+    "bootstrap": "^4.6.2",
+    "bootstrap-vue": "^2.22.0",
+    "core-js": "^3.25.3",
+    "lodash.clonedeep": "^4.5.0",
+    "mapbox-gl": "^2.3.1",
+    "nuxt": "^2.15.8",
+    "popper.js": "^1.14.7",
+    "smoothscroll-polyfill": "^0.4.4",
+    "swiper": "^5.4.5",
+    "v-animate-css": "0.0.3",
+    "vue": "^2.7.10",
+    "vue-fragment": "^1.6.0",
+    "vue-prismjs": "^1.2.0",
+    "vue-server-renderer": "^2.7.10",
+    "vue-template-compiler": "^2.7.10",
+    "slugify": "^1.6.6",
+    "socket.io-client": "^2.3.0",
+    "stream-audio-level": "0.0.5",
+    "twilio-video": "^2.22.1",
+    "javascript-time-ago": "^2.5.7",
+    "js-cookie": "^3.0.5",
+    "laravel-echo": "^1.12.1",
+    "vue-the-mask": "^0.11.1",
+    "vue-multiselect": "^2.1.6",
+    "vue-star-rating": "^1.7.0",
+    "vue-material-design-icons": "^5.1.2",
+    "vue-slider-component": "^3.2.17",
+    "hark": "^1.2.3",
+    "object-to-formdata": "^4.4.2",
+    "vuex-persistedstate": "^3.0.0",
+    "luxon": "1.28.0",
+    "msr": "^1.3.4"
+  }
 }

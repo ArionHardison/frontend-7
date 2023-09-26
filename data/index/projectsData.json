@@ -1,0 +1,32 @@
+{
+    "projectsData": [
+        {
+            "id": 1,
+            "title": "Welding works - Australia, Sydney",
+            "link": "/project-inside",
+            "imgSrc": "assets/img/placeholder/07_img.jpg",
+            "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
+        },
+        {
+            "id": 2,
+            "title": "Industrial equipment - Australia, Sydney",
+            "link": "/project-inside",
+            "imgSrc": "assets/img/placeholder/08_img.jpg",
+            "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
+        },
+        {
+            "id": 3,
+            "title": "Metal constructions - Australia, Sydney",
+            "link": "/project-inside",
+            "imgSrc": "assets/img/placeholder/09_img.jpg",
+            "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
+        },
+        {
+            "id": 4,
+            "title": "Industrial equipment - Australia, Sydney",
+            "link": "/project-inside",
+            "imgSrc": "assets/img/placeholder/10_img.jpg",
+            "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
+        }
+    ]
+}

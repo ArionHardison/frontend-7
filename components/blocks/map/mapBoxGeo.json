@@ -1,0 +1,40 @@
+{
+    "mapBoxGeo": [
+        {
+            "title": "France Office",
+            "description": "575 Crescent Ave. Quakertown, PA 18951 <br/>+432 533 12 523<br/>info@domain.com<br/>Mon - Fri: 9am - 6pm",
+            "coordinates": {
+                "lat": "46.1313635",
+                "lng": "2.4362689"
+            },
+            "style": 1
+        },
+        {
+            "title": "Czechia Office",
+            "description": "575 Crescent Ave. Quakertown, PA 18951 <br/>+432 533 12 523<br/>info@domain.com<br/>Mon - Fri: 9am - 6pm",
+            "coordinates": {
+                "lat": "49.86315947894746",
+                "lng": "15.360651552742063"
+            },
+            "style": 1
+        },
+        {
+            "title": "Belgium Office",
+            "description": "575 Crescent Ave. Quakertown, PA 18951 <br/>+432 533 12 523<br/>info@domain.com<br/>Mon - Fri: 9am - 6pm",
+            "coordinates": {
+                "lat": "50.61599054122103",
+                "lng": "4.741703844837961"
+            },
+            "style": 1
+        },
+        {
+            "title": "Italy Office",
+            "description": "575 Crescent Ave. Quakertown, PA 18951 <br/>+432 533 12 523<br/>info@domain.com<br/>Mon - Fri: 9am - 6pm",
+            "coordinates": {
+                "lat": "43.16522877995208",
+                "lng": "12.435536265097351"
+            },
+            "style": 1
+        }
+    ]
+}

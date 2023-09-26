@@ -1,0 +1,53 @@
+{
+    "searchItems": [
+        {
+            "id": 1,
+            "title": "Welding-topics on The Inverter Power Supply",
+            "category": "Category",
+            "categoryLink": "/news",
+            "link": "/news-single-post",
+            "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered."
+        },
+        {
+            "id": 2,
+            "title": "Welding-topics on The Inverter Power Supply",
+            "category": "Category",
+            "categoryLink": "/news",
+            "link": "/news-single-post",
+            "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered."
+        },
+        {
+            "id": 3,
+            "title": "Welding-topics on The Inverter Power Supply",
+            "category": "Category",
+            "categoryLink": "/news",
+            "link": "/news-single-post",
+            "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered."
+        },
+        {
+            "id": 4,
+            "title": "Welding-topics on The Inverter Power Supply",
+            "category": "Category",
+            "categoryLink": "/news",
+            "link": "/news-single-post",
+            "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered."
+        },
+        {
+            "id": 5,
+            "title": "Welding-topics on The Inverter Power Supply",
+            "category": "Category",
+            "categoryLink": "/news",
+            "link": "/news-single-post",
+            "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered."
+        },
+        {
+            "id": 6,
+            "title": "Welding-topics on The Inverter Power Supply",
+            "category": "Category",
+            "categoryLink": "/news",
+            "link": "/news-single-post",
+            "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered."
+        }
+    ]
+    
+}
