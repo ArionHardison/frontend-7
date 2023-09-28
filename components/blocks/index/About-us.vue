@@ -2,19 +2,19 @@
     <section id="about-us" class="block spacer p-top-xl">
         <div class="wrapper">
             <div class="title">
-                <h2>About</h2>
+                <h2>{{about.absTitle}}</h2>
             </div>
 
             <div class="row gutter-width-md with-pb-md">
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                     <div class="description text-secondary">
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                        <p>{{about.absShortDescription}}</p>
                     </div>
                 </div>
 
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                     <div class="description">
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
+                        <p>{{about.absLongDescription}}</p>
                     </div>
                 </div>
             </div>
@@ -24,6 +24,12 @@
 
 <script>
     export default {
-        name: 'About-us'
+        name: 'About-us',
+        props: {
+          about: {
+            type: Object,
+            default:()=>{}
+          }
+        }
     }
 </script>

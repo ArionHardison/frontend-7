@@ -2,7 +2,7 @@
     <div id="page-title">
         <div class="wrapper">
             <div class="title">
-                <h1 class="large">Contacts</h1>
+                <h1 class="large text-center">{{title}}</h1>
             </div>
         </div>
     </div>
@@ -10,6 +10,12 @@
 
 <script>
     export default {
-        name: 'PageTitle'
+        name: 'PageTitle',
+        props: {
+          title: {
+            type: String,
+            default: "Default"
+          }
+        }
     }
 </script>

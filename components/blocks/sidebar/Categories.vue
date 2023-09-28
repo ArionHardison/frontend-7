@@ -1,24 +1,32 @@
 <template>
-    <div class="widget widget_categories">
-        <h5 class="widget-title">Categories</h5>
+  <div id="categories-2" class="widget widget_categories">
+    <h5 class="widget-title">Categories</h5>
 
-        <ul>
-            <li v-for="categoriesItem in categoriesItems" :key="categoriesItem.id" class="cat-item">
-                <router-link :title="categoriesItem.title" :to="categoriesItem.link">{{ categoriesItem.title }}</router-link>
-            </li>
-        </ul>
-    </div>
+    <ul>
+      <li v-for="category in categories" :key="category.id" class="cat-item">
+        <nuxt-link :title="category.category_name" :to="`/programs/${$slug(category.id, category.category_name)}`">{{ category.category_name }}</nuxt-link>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
-    import CategorieList from '~/data/sidebar/categoriesData';
-
-    export default {
-        name: 'Categories',
-        data() {
-            return {
-                categoriesItems: CategorieList.categoriesData
-            }
-        }
+import api from "~/mixins/api";
+export default {
+  name: 'ProgramCategories',
+  mixins: [api],
+  data() {
+    return {
+      categories: []
     }
+  },
+  created() {
+    this.getCategories();
+  },
+  methods: {
+    async getCategories(){
+      this.categories = await this.get("public/get-program-categories")
+    }
+  }
+}
 </script>

@@ -1,92 +1,98 @@
 <template>
   <client-only>
-    <form class="auth-form" role="form" @submit.prevent="onSubmit">
-      <input-field
-        name="full_name"
-        type="text"
-        v-model="registrationForm.full_name"
-        placeholder="Full Name"
-        class="mb-4"
-      />
-
-      <input-field
-        name="username"
-        type="text"
-        v-model="registrationForm.username"
-        placeholder="Username"
-        class="mb-4"
-      />
-
-      <select-field
-        name="gender"
-        v-model="registrationForm.gender"
-        placeholder="Gender"
-        :options="genderOptions"
-        class="mb-4 w-50"
-      />
-
-      <input-field
-        name="phone"
-        type="text"
-        v-model="registrationForm.phone"
-        :mask="true"
-        mask-data="##########"
-        placeholder="Phone"
-      />
-
-      <input-field
-        name="email"
-        type="email"
-        v-model="registrationForm.email"
-        placeholder="Email"
-        class="mb-4 mt-4"
-      />
-
-      <input-field
-        name="password"
-        type="password"
-        v-model="registrationForm.password"
-        placeholder="Password"
-        class="mb-4"
-      />
-
-      <input-field
-        name="password_confirmation"
-        type="password"
-        v-model="registrationForm.password_confirmation"
-        placeholder="Password Confirmation"
-        class="mb-4"
-      />
-      <div class="row my-4">
-        <div class="col-12">
-          <checkbox-field name="agree">
-            <span class="text-muted"
-              >I agree with the
-              <router-link to="/privacy"
-                >Privacy Policy</router-link
-              > and <router-link to="/terms"
-              >Terms</router-link
-              ></span
+    <div class="col-6 offset-3">
+      <form class="auth-form" role="form" @submit.prevent="onSubmit">
+        <input-field
+          name="full_name"
+          type="text"
+          v-model="registrationForm.full_name"
+          placeholder="Full Name"
+          label="Full Name"
+          class="mb-4"
+        />
+        <input-field
+          name="username"
+          type="text"
+          v-model="registrationForm.username"
+          placeholder="Username"
+          label="Username"
+          class="mb-4"
+        />
+        <select-field
+          name="gender"
+          v-model="registrationForm.gender"
+          placeholder="Gender"
+          label="Gender"
+          :options="genderOptions"
+          class="mb-4 w-100"
+        />
+        <input-field
+          name="phone"
+          type="text"
+          v-model="registrationForm.phone"
+          :mask="true"
+          mask-data="##########"
+          placeholder="Phone"
+          label="Phone"
+        />
+        <input-field
+          name="email"
+          type="email"
+          v-model="registrationForm.email"
+          placeholder="Email"
+          label="Email"
+          class="mb-4 mt-4"
+        />
+        <input-field
+          name="password"
+          type="password"
+          v-model="registrationForm.password"
+          placeholder="Password"
+          label="Password"
+          class="mb-4"
+        />
+        <input-field
+          name="password_confirmation"
+          type="password"
+          v-model="registrationForm.password_confirmation"
+          placeholder="Password Confirmation"
+          label="Password Confirmation"
+          class="mb-4"
+        />
+        <div class="row my-4">
+          <div class="col-12">
+            <checkbox-field name="agree">
+                    <span class="text-muted"
+                    >
+                       I agree with the
+                       <nuxt-link to="/privacy"
+                       >Privacy Policy</nuxt-link
+                       >
+                       and
+                       <nuxt-link to="/terms"
+                       >Terms</nuxt-link
+                       >
+                    </span
+                    >
+            </checkbox-field>
+          </div>
+        </div>
+        <div class="text-center submit-container">
+          <button type="submit" class="btn btn-primary border-0 transform-scale-h mb-3">
+            Create account
+          </button>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12">
+            <nuxt-link to="/auth/login"
+            ><small>Already have account?</small></nuxt-link
             >
-          </checkbox-field>
+          </div>
         </div>
-      </div>
-      <div class="text-center submit-container">
-        <button type="submit" class="btn btn-dark border-0 transform-scale-h mb-3">
-          Create account
-        </button>
-      </div>
-      <div class="row mt-3">
-        <div class="col-12">
-          <router-link to="/auth/login"
-            ><small>Already have account?</small></router-link
-          >
-        </div>
-      </div>
-    </form>
+      </form>
+    </div>
   </client-only>
 </template>
-
 <script>
 import InputField from "~/components/Forms/Fields/InputField";
 import SelectField from "~/components/Forms/Fields/SelectField";
@@ -140,15 +146,14 @@ export default {
         this.registrationForm
       );
       if (response) {
-         this.smsSent = true;
-         this.$store.commit("setAuthData", response);
+        this.smsSent = true;
+        this.$store.commit("setAuthData", response);
         return this.$router.push(`/`);
       }
     },
   },
 };
 </script>
-
 <style scoped>
 .vue-country-select .dropdown-list {
   width: auto !important;

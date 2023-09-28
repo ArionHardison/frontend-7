@@ -5,45 +5,17 @@
                 <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
                     <div class="contacts">
                         <div class="contacts-items">
-                            <div class="contacts-item">
+                            <template v-for="contactItem in contacts.csContatcItem">
+                              <div class="contacts-item">
                                 <div class="contacts-item-title">
-                                    <h6>Location</h6>
+                                  <h6>{{contactItem.clContactsTitle}}</h6>
                                 </div>
 
                                 <div class="contacts-item-description">
-                                    <p>575 Crescent Ave. Quakertown, PA 18951</p>
+                                  <p>{{contactItem.clContactsContent}}</p>
                                 </div>
-                            </div>
-
-                            <div class="contacts-item">
-                                <div class="contacts-item-title">
-                                    <h6>Phone</h6>
-                                </div>
-
-                                <div class="contacts-item-description">
-                                    <p><a href="tel:+43253312523">+432 533 12 523</a></p>
-                                </div>
-                            </div>
-
-                            <div class="contacts-item">
-                                <div class="contacts-item-title">
-                                    <h6>General email</h6>
-                                </div>
-
-                                <div class="contacts-item-description">
-                                    <p><a href="mailto:info@domain.com">info@domain.com</a></p>
-                                </div>
-                            </div>
-
-                            <div class="contacts-item">
-                                <div class="contacts-item-title">
-                                    <h6>Business email</h6>
-                                </div>
-
-                                <div class="contacts-item-description">
-                                    <p><a href="mailto:info2@domain.com">info2@domain.com</a></p>
-                                </div>
-                            </div>
+                              </div>
+                            </template>
                         </div>
                     </div>
                 </div>
@@ -55,18 +27,11 @@
                                 <div class="contacts-item-title">
                                     <h6>Social</h6>
                                 </div>
-
-                                <div class="contacts-item-description">
-                                    <p><a href="https://www.facebook.com/adveits/">Facebook</a></p>
-                                </div>
-
-                                <div class="contacts-item-description">
-                                    <p><a href="https://www.instagram.com/adveits/">Instagram</a></p>
-                                </div>
-
-                                <div class="contacts-item-description">
-                                    <p><a href="https://www.linkedin.com/company/18135051/">Linkedin</a></p>
-                                </div>
+                                <template v-for="socialNetwork in contacts.csSocialNetwork">
+                                  <div class="contacts-item-description">
+                                      <p><a :href="socialNetwork.slNetworkUrl" target="_blank">{{socialNetwork.slNetworkName}}</a></p>
+                                  </div>
+                                </template>
                             </div>
                         </div>
                     </div>
@@ -93,6 +58,12 @@
 
     export default {
         name: 'Conacts',
+        props: {
+          contacts: {
+              type: Object,
+              default: ()=>{}
+          }
+        },
         components: {
             ContactsForm
         }

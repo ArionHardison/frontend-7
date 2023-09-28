@@ -6,7 +6,7 @@
                     <div class="loading-content">
                         <div class="logo logo-primary">
                             <transition appear>
-                                <img class="animated zoomIn" v-if="show" src="assets/img/logo/logo-dark.svg" alt="Logo">
+                                <img class="animated zoomIn" v-if="show" :src="logo" alt="Logo">
                             </transition>
                         </div>
                     </div>
@@ -19,6 +19,11 @@
 <script>
     export default {
         name: 'Loading',
+        computed: {
+          logo() {
+            return this.$imageUrl(this.$store.state.layout.items.logo_light, 'tb');
+          },
+        },
         data() {
             return {
                 isLoading: true,

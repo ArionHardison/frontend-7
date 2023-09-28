@@ -7,9 +7,9 @@
 
             <div class="partners">
                 <div class="partners-items">
-                    <div v-for="partner in partnersItems" :key="partner.id" class="partners-item">
+                    <div v-for="partner in partners" :key="partner.id" class="partners-item">
                         <div class="partners-item-content">
-                            <img :src="partner.imgSrc" alt="Logo">
+                            <img :src="$imageUrl(partner.plLogo, 'sm')" :alt="partner.plLogoAlt_op">
                         </div>
                     </div>
                 </div>
@@ -19,14 +19,14 @@
 </template>
 
 <script>
-    import PartnersData from '~/data/index/partnersData.json';
 
     export default {
         name: 'Partners',
-        data() {
-            return {
-                partnersItems: PartnersData.partnersData
-            }
+        props: {
+          partners: {
+            type: Array,
+            default: []
+          }
         },
         mounted() {
             document.getElementById('partners').querySelector('.partners .partners-items').lastChild.classList.add('bg-primary');

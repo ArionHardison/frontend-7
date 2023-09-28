@@ -28,6 +28,7 @@
     "v-animate-css": "0.0.3",
     "vue": "^2.7.10",
     "vue-fragment": "^1.6.0",
+    "@nuxtjs/dotenv": "^1.4.1",
     "vue-prismjs": "^1.2.0",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10",

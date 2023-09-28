@@ -11,6 +11,7 @@ export default {
   },
   computed: {
     maintenance(){
+      console.log(this.$store.state)
       return this.$store.state.maintenance;
     },
   },

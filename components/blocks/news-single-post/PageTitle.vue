@@ -1,13 +1,19 @@
 <template>
     <section id="page-title">
         <div class="wrapper">
-            <h1 class="large">News</h1>
+            <h1 class="large">{{title}}</h1>
         </div>
     </section>
 </template>
 
 <script>
     export default {
-        name: 'PageTitle'
+        name: 'PageTitle',
+        props: {
+          title: {
+            type: String,
+            default: "Demo"
+          }
+        }
     }
 </script>

@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import Programs from "@/components/pages/Programs";
+import Programs from "~/components/pages/Programs";
 export default {
   components: {
     Programs

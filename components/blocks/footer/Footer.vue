@@ -4,13 +4,13 @@
             <div class="wrapper">
                 <div class="d-flex flex-column flex-md-row flex-lg-row flex-xl-row align-items-center justify-content-between">
                     <div v-if="currentPage !== '/404'" class="logo logo-primary">
-                        <img src="assets/img/logo/logo-dark.svg" alt="Logo">
+                        <img :src="logo" alt="Logo">
                     </div>
 
                     <div class="footer">
                         <div class="align-self-center">
                             <div class="copyright">
-                                <p>© {{ new Date().getFullYear() }} Factrory & Industrial Business Vue JS Template by <a href="https://www.adveits.com">Adveits</a></p>
+                                <p>© {{ new Date().getFullYear() }} {{copy}}</p>
                             </div>
                         </div>
                     </div>
@@ -40,6 +40,12 @@
             SearchModal,
         },
         computed: {
+            logo() {
+              return this.$imageUrl(this.$store.state.layout.items.logo, 'tb');
+            },
+            copy() {
+              return this.$store.state.layout.items.copy;
+            },
             currentPage() {
                 return this.$route.path;
             }

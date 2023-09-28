@@ -3,14 +3,13 @@
         <Loading />
 
         <Header />
-        
+
         <main id="main" class="site-main">
-            <PageTitle title="Sign In" title-h="."/>
+            <PageTitle title="Sign In"/>
 
             <section id="page-content" class="block spacer p-top-xl">
                 <div class="wrapper">
                     <div class="block spacer p-top-xl">
-                        <h2>Sign in <span class="line">form</span></h2>
                         <LoginForm/>
                     </div>
                 </div>

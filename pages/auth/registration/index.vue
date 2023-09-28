@@ -5,12 +5,11 @@
     <Header />
 
     <main id="main" class="site-main">
-      <PageTitle title="Sign Up" title-h="."/>
+      <PageTitle title="Sign Up" />
 
       <section id="page-content" class="block spacer p-top-xl">
         <div class="wrapper">
           <div class="block spacer p-top-xl">
-            <h2>Sign in <span class="line">form</span></h2>
             <RegistrationForm/>
           </div>
         </div>
@@ -25,7 +24,7 @@
 import Loading from '~/components/Loading/Loading';
 import Header from '~/components/blocks/header/Header';
 import Footer from '~/components/blocks/footer/Footer';
-import RegistrationForm from "@/components/Forms/RegistrationForm";
+import RegistrationForm from "~/components/Forms/RegistrationForm";
 import PageTitle from '~/components/blocks/contacts/PageTitle';
 
 export default {

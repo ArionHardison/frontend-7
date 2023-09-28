@@ -71,6 +71,7 @@ const mutations = {
   setTenant(state, tenant) {
     state.layout = tenant.layout;
     state.initializedId = tenant.id;
+    state.maintenance = tenant.maintenance;
   },
   signOut(state) {
     state.authData = {
@@ -105,15 +106,14 @@ const mutations = {
   }
 }
 const actions = {
- /* async nuxtServerInit({commit}, {req}) {
+ async nuxtServerInit({commit}, {req}) {
     const url = req.headers.host;
     const absoluteUrl =  process.env.NODE_ENV === "development"
       ? process.env.CORE_INIT_URL
       : "https://web.codifyhealthcare.com/api"
-    console.log(`${absoluteUrl}/tenant/initialize/${url}`);
     const tenant = await this.$axios.$get(`${absoluteUrl}/tenant/initialize/${url}`);
     commit("setTenant", cloneDeep(tenant.data));
-  }*/
+  }
 };
 
 const getters = {

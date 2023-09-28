@@ -7,23 +7,12 @@
                 </div>
 
                 <div class="row gutter-width-md facts-items">
-                    <div v-for="item in items" :key="item.id" class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                        <div class="facts-item">
-                            <div class="facts-item-content">
-                                <div class="facts-item-left">
-                                    <div class="facts-item-text">
-                                        <p>{{ new Date().getFullYear() }}</p>
-                                    </div>
-                                </div>
 
-                                <div class="facts-item-right">
-                                    <h3 class="facts-item-title">{{ item.count }}</h3>
+                  <StatisticItem title="Published Programs" :number="stats.publishedPrograms"/>
+                  <StatisticItem title="Experts" :number="stats.experts"/>
+                  <StatisticItem title="Finished Programs" :number="stats.finishedPrograms"/>
+                  <StatisticItem title="Users" :number="stats.users"/>
 
-                                    <p class="facts-item-text-1">{{ item.description }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -32,9 +21,17 @@
 
 <script>
     import FactsData from '~/data/index/factsData.json';
+    import StatisticItem from "../ui/StatisticItem.vue";
 
     export default {
         name: 'Facts',
+      components: {StatisticItem},
+        props: {
+          stats: {
+            type: Object,
+            default: ()=>{}
+          }
+        },
         data() {
             return {
                 items: FactsData.factsData

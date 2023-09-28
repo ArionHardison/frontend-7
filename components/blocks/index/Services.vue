@@ -3,24 +3,24 @@
         <div class="adv-slider-services">
             <div class="adv-swiper-container">
                 <div class="adv-swiper-wrapper services-items">
-                    <div v-for="item in items" :key="item.id" :title="item.title" class="adv-swiper-slide services-item">
+                    <div v-for="item in services" :key="item.id" :title="item.slTitle_op" class="adv-swiper-slide services-item">
                         <div class="services-item-content">
                             <div class="services-item-number">{{ item.number }}</div>
 
                             <div class="services-item-t-head">
-                                <router-link :to="item.link">
-                                    <h5>{{ item.title }}</h5>
-                                </router-link>
+                                <nuxt-link :to="$slug(item.id, item.slTitle_op)">
+                                    <h5>{{ item.slTitle_op }}</h5>
+                                </nuxt-link>
                             </div>
 
                             <div class="services-item-body">
-                                <p>{{ item.description }}</p>
+                                <p>{{ item.slServiceSecondDesc }}</p>
                             </div>
 
                             <div class="service-item-footer">
-                                <router-link class="btn btn-link p-0 border-0 min-w-auto" :to="item.link">
+                                <nuxt-link class="btn btn-link p-0 border-0 min-w-auto" :to="$slug(item.id, item.slTitle_op)">
                                     <i class="forch-icon-arrow-right"></i>
-                                </router-link>
+                                </nuxt-link>
                             </div>
                         </div>
                     </div>
@@ -39,13 +39,13 @@
 <script>
     import Swiper from 'swiper';
 
-    import ServicesData from '~/data/services/servicesData.json';
 
     export default {
         name: 'Services',
-        data() {
-            return {
-                items: ServicesData.servicesData
+        props: {
+            services: {
+              type: Array,
+              default: []
             }
         },
         mounted() {

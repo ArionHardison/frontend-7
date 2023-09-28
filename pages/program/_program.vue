@@ -1,46 +1,43 @@
 <template>
-  <div id="journal-single-post-index">
+  <div id="news-single-post-index">
     <Loading />
 
-    <Header />
-    <template v-if="program">
-      <main id="main" class="site-main">
+    <Header logoColor='dark'/>
 
-
-        <section id="page-content" class="spacer m-top-xl">
+    <main id="main" class="site-main">
+      <template v-if="program">
+        <PageTitle :title="program.name"/>
+        <div id="page-content" class="spacer p-top-xl">
           <div class="wrapper">
-            <div id="single">
-              <div class="row gutter-width-lg">
-                <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 position-static single-content">
-                  <div class="img object-fit">
-                    <div class="object-fit-cover">
-                      <img
-                          :src="$imageUrl(program.program_image, 'md', false)"
-                          :alt="program.name"
-                      />
+            <div class="content">
+              <div id="single">
+                <div class="row gutter-width-md">
+                  <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 single-content">
+                    <div class="img object-fit">
+                      <div class="object-fit-cover">
+                        <img :src="$imageUrl(program.program_image, 'md', false)" :alt="program.name">
+                      </div>
                     </div>
+
+                    <div class="title">
+                      <h2>{{program.name}}</h2>
+                    </div>
+
+                    <Meta :program="program"/>
+
+                    <Description :program="program"/>
                   </div>
 
-                  <div class="bg-half-ring-left"></div>
-
-                  <p class="date">
-                    <span class="large">{{ fromIso(program.created_at).day }}</span> {{ fromIso(program.created_at).monthShort}}
-                  </p>
-
-
-
-                  <div class="description">{{program.description}}</div>
-                </div>
-
-                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 ">
+                    <Sidebar :program="program"/>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-      </main>
-    </template>
+        </div>
+      </template>
+    </main>
 
     <Footer />
   </div>
@@ -51,41 +48,39 @@ import Loading from '~/components/Loading/Loading';
 import Header from '~/components/blocks/header/Header';
 import Footer from '~/components/blocks/footer/Footer';
 
-
-import api from "@/mixins/api";
-import time from "@/mixins/time";
-
+import PageTitle from '~/components/blocks/news-single-post/PageTitle';
+import Sidebar from '~/components/blocks/news/Sidebar';
+import Meta from '~/components/blocks/news-single-post/Meta';
+import Description from '~/components/blocks/news-single-post/Description';
+import Tags from '~/components/blocks/news-single-post/Tags';
+import Comments from '~/components/blocks/news-single-post/Comments';
+import api from "~/mixins/api";
 
 export default {
-  mixins: [api, time],
-  middleware: ['maintenance'],
+  mixins: [api],
   components: {
     Loading,
     Header,
     PageTitle,
+    Sidebar,
     Meta,
+    Description,
     Tags,
     Comments,
-    Sidebar,
     Footer
   },
   mounted: function() {
     document.body.classList.add( 'single-post' );
     document.body.classList.add( 'bg-fixed' );
-    document.body.classList.add( 'bg-line' );
-  },
-  beforeDestroy() {
-    document.body.classList.remove( 'single-post' );
-    document.body.classList.remove( 'bg-fixed' );
-    document.body.classList.remove( 'bg-line' );
-  },
-  data(){
-    return {
-      program: null,
-    }
+    document.body.classList.add( 'bg-stripes' );
   },
   created() {
     this.getProgram();
+  },
+  data(){
+    return {
+      program: null
+    }
   },
   methods: {
     async getProgram(){
@@ -98,8 +93,13 @@ export default {
       }
     }
   },
+  beforeDestroy() {
+    document.body.classList.remove( 'single-post' );
+    document.body.classList.add( 'bg-fixed' );
+    document.body.classList.add( 'bg-stripes' );
+  },
   metaInfo: {
-    title: 'Journal single post | Oxer - Minimal Portfolio Vue JS Template',
+    title: 'News single post | Forch - Factory & Industrial Business Vue JS Template',
     titleTemplate: '%s'
   }
 }
