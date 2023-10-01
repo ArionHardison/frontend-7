@@ -5,15 +5,16 @@
         <Header logoColor="dark" />
 
         <main id="main" class="site-main">
-            <PageTitle />
+            <PageTitle title="Contacts"/>
 
             <div id="page-content" class="spacer p-top-xl">
                 <div class="content">
-                    <MapBox />
 
                     <div id="contacts" class="block spacer p-top-xl">
                         <div class="wrapper">
-                            <Contacts />
+                          <template v-if="contacts.contactsSection">
+                            <Contacts :contacts="contacts.contactsSection"/>
+                          </template>
                         </div>
                     </div>
                 </div>
@@ -31,16 +32,20 @@
 
     import PageTitle from '~/components/blocks/contacts/PageTitle';
     import Contacts from '~/components/blocks/index/Contacts';
-    import MapBox from '~/components/blocks/map/MapBox';
-
+    import fcms from "~/mixins/fcms";
     export default {
+        mixins: [fcms],
         components: {
             Loading,
             Header,
             PageTitle,
-            MapBox,
             Contacts,
             Footer
+        },
+        data(){
+          return {
+            contacts: {},
+          }
         },
         mounted: function() {
             document.body.classList.add( 'page' );
@@ -52,8 +57,14 @@
             document.body.classList.remove( 'bg-fixed' );
             document.body.classList.remove( 'bg-stripes' );
         },
+        async created() {
+          const contacts = await this.getEntities("contacts");
+          if (contacts) {
+            this.contacts = contacts.contacts;
+          }
+        },
         metaInfo: {
-            title: 'Contacts | Forch - Factory & Industrial Business Vue JS Template',
+            title: 'Contacts',
             titleTemplate: '%s'
         }
     }

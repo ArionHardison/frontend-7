@@ -1,5 +1,5 @@
 <template>
-  <div id="news-index">
+  <div id="projects-index">
     <Loading />
 
     <Header logoColor='dark'/>
@@ -8,22 +8,21 @@
       <PageTitle />
 
       <div id="page-content" class="spacer p-top-xl">
-        <div class="wrapper">
-          <div class="content">
-            <div id="blog">
-              <div class="row gutter-width-md">
-                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
-                  <NewsBlog />
+        <div class="content">
+          <ProgramsPage />
 
-                  <LoadMore />
-                </div>
 
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                  <Sidebar />
-                </div>
+          <section id="contacts" class="block spacer p-top-xl">
+            <div class="wrapper">
+              <div class="title">
+                <h2>Contacts</h2>
               </div>
+
+              <template v-if="contacts.contactsSection">
+                <Contacts :contacts="contacts.contactsSection"/>
+              </template>
             </div>
-          </div>
+          </section>
         </div>
       </div>
     </main>
@@ -37,33 +36,44 @@ import Loading from '~/components/Loading/Loading';
 import Header from '~/components/blocks/header/Header';
 import Footer from '~/components/blocks/footer/Footer';
 
-import PageTitle from '~/components/blocks/news/PageTitle';
-import Sidebar from '~/components/blocks/news/Sidebar';
-import NewsBlog from '~/components/blocks/news/Blog';
-import LoadMore from '~/components/Loadmore/Loadmore';
+import PageTitle from '~/components/blocks/projects/PageTitle';
+import ProgramsPage from '~/components/blocks/index/ProgramsPage';
+import Contacts from '~/components/blocks/index/Contacts';
+import fcms from "~/mixins/fcms";
 
 export default {
+  mixins: [fcms],
   components: {
     Loading,
     Header,
     PageTitle,
-    Sidebar,
-    NewsBlog,
-    LoadMore,
+    ProgramsPage,
+    Contacts,
     Footer
   },
+  data(){
+    return {
+      contacts: {}
+    }
+  },
+  async created(){
+    const contacts = await this.getEntities("contacts");
+    if(contacts){
+      this.contacts = contacts.contacts;
+    }
+  },
   mounted: function() {
-    document.body.classList.add( 'blog' );
+    document.body.classList.add( 'page' );
     document.body.classList.add( 'bg-fixed' );
     document.body.classList.add( 'bg-stripes' );
   },
   beforeDestroy() {
-    document.body.classList.remove( 'blog' );
-    document.body.classList.remove( 'bg-fixed' );
-    document.body.classList.remove( 'bg-stripes' );
+    document.body.classList.remove( 'page' );
+    document.body.classList.add( 'bg-fixed' );
+    document.body.classList.add( 'bg-stripes' );
   },
   metaInfo: {
-    title: 'News | Forch - Factory & Industrial Business Vue JS Template',
+    title: 'Programs',
     titleTemplate: '%s'
   }
 }

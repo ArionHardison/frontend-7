@@ -5,18 +5,9 @@
                 <nuxt-link title="Home" to="/">Home</nuxt-link>
             </li>
 
-            <li :class="[currentPage.includes('about') ? activeClass : '', 'nav-item']">
-                <nuxt-link title="About" to="/about">About</nuxt-link>
-            </li>
-
-            <li :class="[currentPage.includes('services') || currentPage.includes('services-inside')  ? activeClass : '', 'nav-item']">
-                <nuxt-link title="Services" to="/services">Services</nuxt-link>
-            </li>
-
             <li :class="[currentPage.includes('programs') || currentPage.includes('programs-inside')  ? activeClass : '', 'nav-item']">
                 <nuxt-link title="Programs" to="/programs">Programs</nuxt-link>
             </li>
-
 
             <li :class="[currentPage.includes('contacts') ? activeClass : '', 'nav-item']">
                 <nuxt-link title="Contacts" to="/contacts">Contacts</nuxt-link>

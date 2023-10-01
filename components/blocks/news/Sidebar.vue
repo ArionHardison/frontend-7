@@ -15,7 +15,7 @@
           <h3>Free</h3>
           <button
             class="
-                  btn btn-dark border-0 transform-scale-h mb-3 btn-block mt-3
+                  btn btn-primary border-0 transform-scale-h mb-3 btn-block mt-3
                   "
             type="button"
             :disabled="program.borken"
@@ -34,7 +34,7 @@
           <button
             :disabled="program.borken"
             class="
-                  btn btn-dark border-0 transform-scale-h mb-3 btn-block mt-3
+                  btn btn-primary border-0 transform-scale-h mb-3 btn-block mt-3
                   "
             type="button"
             @click="startProgram"

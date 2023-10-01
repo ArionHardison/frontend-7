@@ -2,7 +2,7 @@
     <div id="page-title">
         <div class="wrapper">
             <div class="title">
-                <h1 class="large">Projects</h1>
+                <h1 class="large">Programs</h1>
             </div>
         </div>
     </div>

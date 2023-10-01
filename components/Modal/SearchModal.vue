@@ -22,18 +22,9 @@
                             </div>
 
                             <div class="modal-body modal-body-centered">
-                                <SearchFormPrimary />
+                                <SearchFormPrimary redirect path="/programs" @search="closeModal" />
                             </div>
 
-                            <div class="modal-footer">
-                                <nav class="menu-secondary">
-                                    <ul class="nav">
-                                        <li v-for="item in items" :key="item.id" class="nav-item">
-                                            <a :title="item.title" :href="item.link"><i :class="item.icon"></i></a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -50,20 +41,12 @@
 
     import Logo from '~/components/blocks/header/HeaderLogo';
     import SearchFormPrimary from '~/components/Forms/SearchFormPrimary';
-
-    import FooterData from '~/data/footer/footerData.json';
-
     export default {
         name: 'Search-Modal',
         components: {
             Logo,
             SearchFormPrimary,
             Fragment
-        },
-        data() {
-            return {
-                items: FooterData.footerData,
-            }
         },
         computed: {
             showSearchModal () {

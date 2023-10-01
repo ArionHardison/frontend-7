@@ -8,7 +8,7 @@
                             <div class="services-item-number">{{ item.number }}</div>
 
                             <div class="services-item-t-head">
-                                <nuxt-link :to="$slug(item.id, item.slTitle_op)">
+                                <nuxt-link :to="`/service/${$slug(item.id, item.slTitle_op)}`">
                                     <h5>{{ item.slTitle_op }}</h5>
                                 </nuxt-link>
                             </div>
@@ -18,7 +18,7 @@
                             </div>
 
                             <div class="service-item-footer">
-                                <nuxt-link class="btn btn-link p-0 border-0 min-w-auto" :to="$slug(item.id, item.slTitle_op)">
+                                <nuxt-link class="btn btn-link p-0 border-0 min-w-auto" :to="`/service/${$slug(item.id, item.slTitle_op)}`">
                                     <i class="forch-icon-arrow-right"></i>
                                 </nuxt-link>
                             </div>
