@@ -124,6 +124,7 @@ export default {
       ],
       countryAndPhone: null,
       registrationForm: {
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
         full_name: "",
         username: "",
         email: "",
